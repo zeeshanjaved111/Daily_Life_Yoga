@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Yoga | Yoga Training, Masterclass & One-to-One Consultancy</title>
+<meta name="description" content="Daily Yoga offers 20-hour yoga training masterclasses and one-to-one consultancy for stress relief, back pain, flexibility, and holistic wellness. Book your free call today.">
+<meta name="keywords" content="yoga for back pain, yoga for stress relief, yoga for anxiety, yoga for flexibility, yoga masterclass, yoga training, prenatal yoga, yoga for working professionals">
+<meta property="og:title" content="Daily Yoga | Transform Your Body & Mind">
+<meta property="og:description" content="Expert yoga training, masterclasses & personal consultancy. Serving health enthusiasts, professionals, and women on their wellness journey.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest: #1B3A2D;
+    --sage: #7BAE8F;
+    --sage-light: #A8CAAA;
+    --gold: #C9A84C;
+    --gold-light: #E8D08A;
+    --cream: #F7F4EF;
+    --white: #FFFFFF;
+    --charcoal: #2C2C2C;
+    --muted: #6B7280;
+    --border: #E2DDD6;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    overflow-x: hidden;
+  }
+
+  /* ── TYPOGRAPHY ── */
+  h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
+  h1 { font-size: clamp(2.8rem, 7vw, 5.5rem); font-weight: 300; line-height: 1.08; letter-spacing: -0.02em; }
+  h2 { font-size: clamp(2rem, 4.5vw, 3.5rem); font-weight: 300; line-height: 1.15; }
+  h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); font-weight: 400; }
+  p { font-size: 1rem; line-height: 1.75; color: var(--muted); }
+
+  /* ── BUTTONS ── */
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 32px; border-radius: 50px; font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem; font-weight: 500; letter-spacing: 0.03em;
+    text-decoration: none; cursor: pointer; border: none;
+    transition: all 0.3s ease;
+  }
+  .btn-primary {
+    background: var(--gold); color: var(--forest);
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,168,76,0.35); }
+  .btn-outline {
+    background: transparent; color: var(--white);
+    border: 1.5px solid rgba(255,255,255,0.5);
+  }
+  .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: var(--white); }
+  .btn-dark {
+    background: var(--forest); color: var(--white);
+  }
+  .btn-dark:hover { background: #0f2218; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(27,58,45,0.3); }
+  .btn-ghost {
+    background: transparent; color: var(--forest);
+    border: 1.5px solid var(--forest);
+  }
+  .btn-ghost:hover { background: var(--forest); color: var(--white); }
+
+  /* ── PAGES ── */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* ── HEADER ── */
+  header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px;
+    background: rgba(247,244,239,0.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s ease;
+  }
+  header.scrolled {
+    height: 62px;
+    box-shadow: 0 2px 20px rgba(27,58,45,0.08);
+  }
+  .logo {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none;
+  }
+  .logo-mark {
+    width: 38px; height: 38px;
+    background: var(--forest); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .logo-mark svg { width: 20px; height: 20px; }
+  .logo-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.45rem; font-weight: 600;
+    color: var(--forest); letter-spacing: 0.01em;
+  }
+  .logo-text span { color: var(--gold); }
+
+  nav { display: flex; align-items: center; gap: 8px; }
+  nav a {
+    padding: 8px 14px; font-size: 0.88rem; font-weight: 500;
+    color: var(--charcoal); text-decoration: none;
+    border-radius: 6px; transition: all 0.2s;
+    cursor: pointer;
+  }
+  nav a:hover, nav a.active { color: var(--forest); background: rgba(27,58,45,0.07); }
+
+  .header-cta { margin-left: 8px; }
+
+  .hamburger {
+    display: none; flex-direction: column; gap: 5px;
+    cursor: pointer; padding: 8px; border: none; background: none;
+  }
+  .hamburger span {
+    display: block; width: 22px; height: 2px;
+    background: var(--forest); border-radius: 2px; transition: all 0.3s;
+  }
+
+  .mobile-menu {
+    display: none; position: fixed; top: 72px; left: 0; right: 0;
+    background: var(--white); border-bottom: 1px solid var(--border);
+    padding: 16px 5% 24px; z-index: 999; flex-direction: column; gap: 4px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    padding: 12px 16px; font-size: 1rem; color: var(--charcoal);
+    text-decoration: none; border-radius: 8px; cursor: pointer;
+    transition: background 0.2s;
+  }
+  .mobile-menu a:hover { background: var(--cream); }
+  .mobile-menu .btn { margin-top: 8px; justify-content: center; }
+
+  /* ── WAVE DIVIDER ── */
+  .wave { width: 100%; overflow: hidden; line-height: 0; }
+  .wave svg { display: block; width: 100%; }
+
+  /* ── LOTUS DIVIDER (signature) ── */
+  .lotus-divider {
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px; margin: 24px 0;
+  }
+  .lotus-divider::before, .lotus-divider::after {
+    content: ''; flex: 1; height: 1px; background: var(--border);
+    max-width: 120px;
+  }
+  .lotus-svg { width: 32px; height: 32px; opacity: 0.6; }
+
+  /* ── EYEBROW ── */
+  .eyebrow {
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--gold);
+    display: block; margin-bottom: 12px;
+  }
+
+  /* ── SECTIONS ── */
+  .section { padding: 96px 5%; }
+  .section-sm { padding: 64px 5%; }
+  .container { max-width: 1200px; margin: 0 auto; }
+  .container-narrow { max-width: 720px; margin: 0 auto; }
+  .text-center { text-align: center; }
+
+  /* ═══════════════════════════════════════
+     HOME PAGE
+  ═══════════════════════════════════════ */
+
+  /* Hero */
+  #home-hero {
+    min-height: 100vh;
+    background: var(--forest);
+    display: grid; grid-template-columns: 1fr 1fr;
+    align-items: center; gap: 0;
+    position: relative; overflow: hidden;
+    padding-top: 72px;
+  }
+  .hero-content {
+    padding: 80px 5% 80px 8%;
+    position: relative; z-index: 2;
+  }
+  .hero-content .eyebrow { color: var(--sage-light); }
+  .hero-content h1 { color: var(--white); margin-bottom: 24px; }
+  .hero-content h1 em { color: var(--gold); font-style: italic; }
+  .hero-content p { color: rgba(255,255,255,0.7); font-size: 1.05rem; max-width: 440px; margin-bottom: 36px; }
+  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero-stats {
+    display: flex; gap: 40px; margin-top: 56px;
+    padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.15);
+  }
+  .stat-item { }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem; font-weight: 300; color: var(--gold);
+    line-height: 1;
+  }
+  .stat-label { font-size: 0.82rem; color: rgba(255,255,255,0.55); margin-top: 4px; }
+
+  .hero-image {
+    height: 100vh; position: relative; overflow: hidden;
+  }
+  .hero-image img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: brightness(0.75) saturate(0.8);
+  }
+  .hero-image-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to right, var(--forest) 0%, transparent 40%);
+  }
+
+  /* Floating badge */
+  .hero-badge {
+    position: absolute; bottom: 48px; left: 48px;
+    background: var(--white); border-radius: 16px;
+    padding: 16px 20px; display: flex; align-items: center; gap: 12px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15); z-index: 3;
+  }
+  .badge-avatar {
+    width: 44px; height: 44px; border-radius: 50%; overflow: hidden;
+    border: 2px solid var(--gold);
+  }
+  .badge-avatar img { width: 100%; height: 100%; object-fit: cover; }
+  .badge-text { font-size: 0.82rem; }
+  .badge-text strong { display: block; font-size: 0.9rem; color: var(--forest); }
+  .badge-text span { color: var(--muted); }
+  .stars { color: var(--gold); font-size: 0.75rem; margin-top: 2px; }
+
+  /* Trust Strip */
+  .trust-strip {
+    background: var(--white); padding: 28px 5%;
+    border-bottom: 1px solid var(--border);
+  }
+  .trust-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px; flex-wrap: wrap;
+  }
+  .trust-label { font-size: 0.8rem; color: var(--muted); font-weight: 500; flex-shrink: 0; }
+  .trust-items { display: flex; gap: 32px; flex-wrap: wrap; align-items: center; }
+  .trust-item { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 500; color: var(--charcoal); }
+  .trust-icon { font-size: 1.1rem; }
+
+  /* Benefits */
+  .benefits-grid {
+    display: grid; grid-template-columns: repeat(3,1fr); gap: 32px;
+    margin-top: 56px;
+  }
+  .benefit-card {
+    background: var(--white); border-radius: 20px;
+    padding: 40px 32px; border: 1px solid var(--border);
+    transition: all 0.3s ease; position: relative; overflow: hidden;
+  }
+  .benefit-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--sage), var(--gold));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  .benefit-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(27,58,45,0.1); }
+  .benefit-card:hover::before { transform: scaleX(1); }
+  .benefit-icon {
+    width: 56px; height: 56px; border-radius: 14px;
+    background: linear-gradient(135deg, var(--forest), var(--sage));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem; margin-bottom: 24px;
+  }
+  .benefit-card h3 { color: var(--forest); margin-bottom: 12px; font-size: 1.3rem; }
+
+  /* Services Preview */
+  .services-preview { background: var(--forest); }
+  .services-preview .eyebrow { color: var(--sage-light); }
+  .services-preview h2 { color: var(--white); }
+  .services-preview h2 em { color: var(--gold); font-style: italic; }
+  .services-cards {
+    display: grid; grid-template-columns: repeat(2,1fr); gap: 24px;
+    margin-top: 56px;
+  }
+  .service-preview-card {
+    border-radius: 20px; overflow: hidden; position: relative;
+    height: 340px; cursor: pointer;
+  }
+  .service-preview-card img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  .service-preview-card:hover img { transform: scale(1.05); }
+  .spc-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(27,58,45,0.95) 0%, transparent 55%);
+  }
+  .spc-content {
+    position: absolute; bottom: 0; left: 0; right: 0; padding: 28px;
+  }
+  .spc-tag {
+    display: inline-block; padding: 4px 12px;
+    background: rgba(201,168,76,0.2); border: 1px solid var(--gold);
+    color: var(--gold); border-radius: 20px; font-size: 0.75rem;
+    margin-bottom: 10px;
+  }
+  .spc-content h3 { color: var(--white); font-size: 1.4rem; margin-bottom: 6px; }
+  .spc-content p { color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.5; }
+
+  /* Testimonials */
+  .testimonials-grid {
+    display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;
+    margin-top: 56px;
+  }
+  .testi-card {
+    background: var(--white); border-radius: 20px;
+    padding: 32px 28px; border: 1px solid var(--border);
+    transition: box-shadow 0.3s;
+  }
+  .testi-card:hover { box-shadow: 0 12px 40px rgba(27,58,45,0.08); }
+  .testi-stars { color: var(--gold); font-size: 0.9rem; margin-bottom: 16px; }
+  .testi-text { font-size: 0.95rem; line-height: 1.7; color: var(--charcoal); margin-bottom: 20px; font-style: italic; }
+  .testi-author { display: flex; align-items: center; gap: 12px; }
+  .testi-avatar {
+    width: 44px; height: 44px; border-radius: 50%; overflow: hidden;
+    border: 2px solid var(--sage-light);
+  }
+  .testi-avatar img { width: 100%; height: 100%; object-fit: cover; }
+  .testi-name { font-weight: 600; font-size: 0.9rem; color: var(--forest); }
+  .testi-role { font-size: 0.78rem; color: var(--muted); }
+
+  /* About Preview */
+  .about-preview { background: var(--cream); }
+  .about-preview-inner {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+  }
+  .about-preview-img { border-radius: 24px; overflow: hidden; aspect-ratio: 4/5; }
+  .about-preview-img img { width: 100%; height: 100%; object-fit: cover; }
+  .about-preview-content .eyebrow { margin-bottom: 8px; }
+  .about-preview-content h2 { color: var(--forest); margin-bottom: 20px; }
+  .about-preview-content p { margin-bottom: 16px; }
+  .about-check { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .check-icon { width: 22px; height: 22px; border-radius: 50%; background: var(--sage); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: white; font-size: 0.7rem; }
+  .about-checks { margin: 24px 0 32px; }
+
+  /* Final Home CTA */
+  .home-cta {
+    background: linear-gradient(135deg, var(--forest) 0%, #0f2218 100%);
+    text-align: center; position: relative; overflow: hidden;
+  }
+  .home-cta::before {
+    content: ''; position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%237BAE8F' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .home-cta .container { position: relative; }
+  .home-cta h2 { color: var(--white); margin-bottom: 16px; }
+  .home-cta h2 em { color: var(--gold); font-style: italic; }
+  .home-cta p { color: rgba(255,255,255,0.65); max-width: 480px; margin: 0 auto 36px; }
+  .home-cta .btn-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+  /* ═══════════════════════════════════════
+     ABOUT PAGE
+  ═══════════════════════════════════════ */
+  .page-hero {
+    padding: 160px 5% 96px;
+    background: var(--forest); text-align: center;
+  }
+  .page-hero .eyebrow { color: var(--sage-light); }
+  .page-hero h1 { color: var(--white); }
+  .page-hero h1 em { color: var(--gold); font-style: italic; }
+  .page-hero p { color: rgba(255,255,255,0.65); max-width: 560px; margin: 20px auto 0; font-size: 1.05rem; }
+
+  .story-section {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+    max-width: 1200px; margin: 0 auto;
+  }
+  .story-img { border-radius: 24px; overflow: hidden; aspect-ratio: 3/4; }
+  .story-img img { width: 100%; height: 100%; object-fit: cover; }
+  .story-content h2 { color: var(--forest); margin-bottom: 20px; }
+  .story-content p { margin-bottom: 16px; }
+
+  .mission-section {
+    background: var(--forest);
+    display: grid; grid-template-columns: repeat(3,1fr); gap: 1px;
+  }
+  .mission-card {
+    padding: 56px 40px; background: rgba(255,255,255,0.04);
+    border-right: 1px solid rgba(255,255,255,0.1);
+    transition: background 0.3s;
+  }
+  .mission-card:hover { background: rgba(255,255,255,0.07); }
+  .mission-card:last-child { border-right: none; }
+  .mission-icon { font-size: 2rem; margin-bottom: 20px; }
+  .mission-card h3 { color: var(--gold); margin-bottom: 12px; font-size: 1.3rem; }
+  .mission-card p { color: rgba(255,255,255,0.65); }
+
+  .diff-grid {
+    display: grid; grid-template-columns: repeat(2,1fr); gap: 24px;
+    margin-top: 56px;
+  }
+  .diff-item {
+    padding: 32px; border-radius: 16px;
+    background: var(--white); border: 1px solid var(--border);
+    display: flex; gap: 20px;
+  }
+  .diff-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem; font-weight: 300; color: var(--border);
+    line-height: 1; flex-shrink: 0;
+  }
+  .diff-item h3 { color: var(--forest); margin-bottom: 8px; }
+
+  /* ═══════════════════════════════════════
+     SERVICES PAGE
+  ═══════════════════════════════════════ */
+  .services-grid {
+    display: grid; grid-template-columns: repeat(3,1fr); gap: 28px;
+    margin-top: 56px;
+  }
+  .service-card {
+    background: var(--white); border-radius: 20px;
+    overflow: hidden; border: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  .service-card:hover { transform: translateY(-8px); box-shadow: 0 24px 56px rgba(27,58,45,0.12); }
+  .service-card-img { height: 220px; overflow: hidden; }
+  .service-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+  .service-card:hover .service-card-img img { transform: scale(1.06); }
+  .service-card-body { padding: 28px; }
+  .service-tag {
+    display: inline-block; padding: 4px 12px;
+    background: rgba(123,174,143,0.12); color: var(--forest);
+    border-radius: 20px; font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.05em; margin-bottom: 12px;
+  }
+  .service-card-body h3 { color: var(--forest); margin-bottom: 10px; }
+  .service-card-body p { font-size: 0.9rem; margin-bottom: 20px; }
+  .service-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem; font-weight: 300; color: var(--gold);
+    display: block; margin-bottom: 16px;
+  }
+
+  /* How it works */
+  .how-steps {
+    display: grid; grid-template-columns: repeat(4,1fr); gap: 0;
+    margin-top: 56px; position: relative;
+  }
+  .how-steps::before {
+    content: ''; position: absolute; top: 32px; left: 12.5%; right: 12.5%; height: 2px;
+    background: linear-gradient(90deg, var(--sage), var(--gold));
+  }
+  .how-step { text-align: center; padding: 0 20px; }
+  .step-num {
+    width: 64px; height: 64px; border-radius: 50%;
+    background: var(--white); border: 2px solid var(--sage);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem; font-weight: 400; color: var(--forest);
+    margin: 0 auto 20px; position: relative; z-index: 1;
+  }
+  .how-step:nth-child(2) .step-num { border-color: var(--sage); background: var(--sage); color: var(--white); }
+  .how-step:nth-child(3) .step-num { border-color: var(--gold); }
+  .how-step:nth-child(4) .step-num { border-color: var(--gold); background: var(--gold); color: var(--forest); }
+  .how-step h3 { font-size: 1.05rem; color: var(--forest); margin-bottom: 8px; }
+  .how-step p { font-size: 0.85rem; }
+
+  /* FAQ */
+  .faq-list { margin-top: 48px; max-width: 760px; margin-left: auto; margin-right: auto; }
+  .faq-item {
+    border-bottom: 1px solid var(--border); padding: 0;
+    overflow: hidden;
+  }
+  .faq-q {
+    padding: 22px 0; display: flex; justify-content: space-between; align-items: center;
+    cursor: pointer; user-select: none;
+  }
+  .faq-q h3 { font-size: 1rem; color: var(--forest); font-family: 'DM Sans', sans-serif; font-weight: 500; }
+  .faq-icon {
+    width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; color: var(--forest); font-size: 1rem; transition: all 0.3s;
+  }
+  .faq-item.open .faq-icon { background: var(--forest); color: var(--white); transform: rotate(45deg); }
+  .faq-a { padding: 0 0 20px; display: none; }
+  .faq-item.open .faq-a { display: block; }
+
+  /* ═══════════════════════════════════════
+     LISTINGS PAGE
+  ═══════════════════════════════════════ */
+  .filter-bar {
+    display: flex; gap: 10px; flex-wrap: wrap;
+    margin-bottom: 40px; padding: 20px 24px;
+    background: var(--white); border-radius: 14px; border: 1px solid var(--border);
+  }
+  .filter-btn {
+    padding: 8px 20px; border-radius: 30px; border: 1.5px solid var(--border);
+    background: transparent; font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem; cursor: pointer; transition: all 0.2s; color: var(--charcoal);
+  }
+  .filter-btn.active, .filter-btn:hover {
+    background: var(--forest); color: var(--white); border-color: var(--forest);
+  }
+
+  .listings-grid {
+    display: grid; grid-template-columns: repeat(3,1fr); gap: 28px;
+  }
+  .listing-card {
+    background: var(--white); border-radius: 20px; overflow: hidden;
+    border: 1px solid var(--border); transition: all 0.3s;
+    display: flex; flex-direction: column;
+  }
+  .listing-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(27,58,45,0.1); }
+  .listing-img { height: 240px; overflow: hidden; position: relative; }
+  .listing-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+  .listing-card:hover .listing-img img { transform: scale(1.06); }
+  .listing-badge {
+    position: absolute; top: 16px; left: 16px;
+    padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;
+    background: var(--gold); color: var(--forest);
+  }
+  .listing-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+  .listing-cat { font-size: 0.75rem; color: var(--sage); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+  .listing-body h3 { color: var(--forest); margin-bottom: 8px; font-size: 1.1rem; }
+  .listing-body p { font-size: 0.875rem; flex: 1; margin-bottom: 20px; }
+  .listing-meta { display: flex; justify-content: space-between; align-items: center; }
+  .listing-price { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--gold); }
+  .listing-duration { font-size: 0.8rem; color: var(--muted); }
+
+  /* ═══════════════════════════════════════
+     CONTACT PAGE
+  ═══════════════════════════════════════ */
+  .contact-layout {
+    display: grid; grid-template-columns: 5fr 7fr; gap: 64px; align-items: start;
+  }
+  .contact-info h2 { color: var(--forest); margin-bottom: 16px; }
+  .contact-info > p { margin-bottom: 40px; }
+  .contact-detail {
+    display: flex; align-items: flex-start; gap: 16px; margin-bottom: 28px;
+  }
+  .detail-icon {
+    width: 44px; height: 44px; border-radius: 12px;
+    background: rgba(27,58,45,0.06); display: flex; align-items: center;
+    justify-content: center; font-size: 1.1rem; flex-shrink: 0;
+  }
+  .detail-label { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+  .detail-value { font-size: 0.95rem; color: var(--forest); font-weight: 500; margin-top: 2px; }
+  .social-links { display: flex; gap: 12px; margin-top: 40px; }
+  .social-link {
+    width: 44px; height: 44px; border-radius: 12px;
+    border: 1.5px solid var(--border); display: flex; align-items: center;
+    justify-content: center; text-decoration: none; font-size: 1rem;
+    transition: all 0.2s; color: var(--charcoal);
+  }
+  .social-link:hover { background: var(--forest); border-color: var(--forest); color: var(--white); }
+
+  /* Contact Form */
+  .contact-form-wrap {
+    background: var(--white); border-radius: 24px; padding: 48px;
+    border: 1px solid var(--border);
+  }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .form-group { display: flex; flex-direction: column; gap: 8px; }
+  .form-group.full { grid-column: 1 / -1; }
+  label { font-size: 0.82rem; font-weight: 600; color: var(--forest); }
+  input, textarea, select {
+    padding: 14px 16px; border: 1.5px solid var(--border); border-radius: 10px;
+    font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: var(--charcoal);
+    background: var(--cream); transition: border 0.2s;
+    outline: none; width: 100%;
+  }
+  input:focus, textarea:focus, select:focus { border-color: var(--sage); background: var(--white); }
+  textarea { resize: vertical; min-height: 120px; }
+  .form-submit { margin-top: 8px; width: 100%; justify-content: center; font-size: 1rem; padding: 16px; }
+
+  /* Map Placeholder */
+  .map-section { background: var(--cream); padding: 0; }
+  .map-placeholder {
+    width: 100%; height: 320px;
+    background: linear-gradient(135deg, var(--forest) 0%, #2a5940 100%);
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .map-pin { text-align: center; color: var(--white); }
+  .map-pin-icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+  .map-pin h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--white); }
+  .map-pin p { color: rgba(255,255,255,0.65); }
+
+  /* ═══════════════════════════════════════
+     FOOTER
+  ═══════════════════════════════════════ */
+  footer {
+    background: #0f2218; padding: 72px 5% 0;
+  }
+  .footer-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 48px;
+    max-width: 1200px; margin: 0 auto;
+    padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .footer-brand p { color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-top: 16px; max-width: 280px; line-height: 1.7; }
+  .footer-logo { display: flex; align-items: center; gap: 10px; }
+  .footer-logo .logo-mark { background: var(--gold); }
+  .footer-logo .logo-text { color: var(--white); }
+  .footer-col h4 { color: var(--white); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col ul li a {
+    color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.88rem;
+    transition: color 0.2s; cursor: pointer;
+  }
+  .footer-col ul li a:hover { color: var(--gold); }
+  .footer-contact p { color: rgba(255,255,255,0.5); font-size: 0.88rem; line-height: 1.8; }
+  .footer-socials { display: flex; gap: 10px; margin-top: 16px; }
+  .footer-social {
+    width: 36px; height: 36px; border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center;
+    justify-content: center; text-decoration: none; font-size: 0.9rem; color: rgba(255,255,255,0.5);
+    transition: all 0.2s;
+  }
+  .footer-social:hover { background: var(--gold); border-color: var(--gold); color: var(--forest); }
+  .footer-bottom {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 0;
+  }
+  .footer-bottom p { color: rgba(255,255,255,0.3); font-size: 0.8rem; }
+  .footer-bottom a { color: rgba(255,255,255,0.4); text-decoration: none; }
+  .footer-bottom a:hover { color: var(--gold); }
+
+  /* ═══════════════════════════════════════
+     SCROLL ANIMATIONS
+  ═══════════════════════════════════════ */
+  .fade-up {
+    opacity: 0; transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  /* ═══════════════════════════════════════
+     RESPONSIVE
+  ═══════════════════════════════════════ */
+  @media (max-width: 1024px) {
+    .benefits-grid { grid-template-columns: 1fr 1fr; }
+    .services-grid { grid-template-columns: 1fr 1fr; }
+    .listings-grid { grid-template-columns: 1fr 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr 1fr; }
+    .mission-section { grid-template-columns: 1fr; }
+    .mission-card { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 768px) {
+    nav { display: none; }
+    .header-cta { display: none; }
+    .hamburger { display: flex; }
+
+    #home-hero { grid-template-columns: 1fr; }
+    .hero-image { height: 50vh; }
+    .hero-image-overlay { background: linear-gradient(to bottom, var(--forest) 0%, transparent 40%); }
+    .hero-content { padding: 60px 5%; }
+    .hero-stats { gap: 24px; }
+    .hero-badge { display: none; }
+
+    .about-preview-inner { grid-template-columns: 1fr; gap: 40px; }
+    .story-section { grid-template-columns: 1fr; gap: 40px; }
+    .diff-grid { grid-template-columns: 1fr; }
+    .services-cards { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .how-steps { grid-template-columns: 1fr 1fr; }
+    .how-steps::before { display: none; }
+    .contact-layout { grid-template-columns: 1fr; }
+    .form-grid { grid-template-columns: 1fr; }
+    .contact-form-wrap { padding: 28px 20px; }
+    .listings-grid { grid-template-columns: 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    .trust-items { gap: 16px; }
+    .benefits-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════ HEADER ══════════════ -->
+<header id="main-header">
+  <a class="logo" onclick="showPage('home')">
+    <div class="logo-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+        <path d="M12 2C8 2 5 6 5 10c0 3 2 5.5 4.5 7L12 22l2.5-5C17 15.5 19 13 19 10c0-4-3-8-7-8z"/>
+        <circle cx="12" cy="10" r="2.5" fill="white" stroke="none"/>
+      </svg>
+    </div>
+    <span class="logo-text">Daily<span>Yoga</span></span>
+  </a>
+
+  <nav>
+    <a onclick="showPage('home')" class="active" id="nav-home">Home</a>
+    <a onclick="showPage('about')" id="nav-about">About</a>
+    <a onclick="showPage('services')" id="nav-services">Services</a>
+    <a onclick="showPage('listings')" id="nav-listings">Programs</a>
+    <a onclick="showPage('contact')" id="nav-contact">Contact</a>
+  </nav>
+
+  <button class="btn btn-primary header-cta" onclick="showPage('contact')">Book Free Call →</button>
+
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <a onclick="showPage('home'); toggleMenu()">Home</a>
+  <a onclick="showPage('about'); toggleMenu()">About</a>
+  <a onclick="showPage('services'); toggleMenu()">Services</a>
+  <a onclick="showPage('listings'); toggleMenu()">Programs</a>
+  <a onclick="showPage('contact'); toggleMenu()">Contact</a>
+  <button class="btn btn-primary" onclick="showPage('contact'); toggleMenu()">Book Free Call →</button>
+</div>
+
+<!-- ══════════════ HOME PAGE ══════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- Hero -->
+  <section id="home-hero">
+    <div class="hero-content">
+      <span class="eyebrow">✦ Certified Yoga Masterclass</span>
+      <h1>Transform Your <em>Body,</em> Calm Your Mind</h1>
+      <p>20-hour yoga training masterclasses and one-to-one consultancy designed for lasting change — whether you're seeking pain relief, stress reduction, or peak performance.</p>
+      <div class="hero-btns">
+        <button class="btn btn-primary" onclick="showPage('contact')">Book Free Consultation →</button>
+        <button class="btn btn-outline" onclick="showPage('services')">Explore Programs</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">500+</div>
+          <div class="stat-label">Students Transformed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">8+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">20hr</div>
+          <div class="stat-label">Masterclass Program</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=900&q=80" alt="Yoga practitioner in serene meditation pose at sunrise">
+      <div class="hero-image-overlay"></div>
+      <div class="hero-badge">
+        <div class="badge-avatar">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80" alt="Happy yoga student">
+        </div>
+        <div class="badge-text">
+          <strong>Iqra Aziz</strong>
+          <span>"Changed my life in 30 days"</span>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Strip -->
+  <div class="trust-strip">
+    <div class="trust-inner">
+      <span class="trust-label">Trusted by:</span>
+      <div class="trust-items">
+        <div class="trust-item"><span class="trust-icon">🏥</span> Health Enthusiasts</div>
+        <div class="trust-item"><span class="trust-icon">💼</span> Working Professionals</div>
+        <div class="trust-item"><span class="trust-icon">🤱</span> Prenatal Mothers</div>
+        <div class="trust-item"><span class="trust-icon">🏃</span> Athletes</div>
+        <div class="trust-item"><span class="trust-icon">⭐</span> 4.9/5 Rating</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Benefits -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="eyebrow">Why Daily Yoga</span>
+        <h2>Yoga that <em style="font-style:italic;color:var(--sage)">actually</em> fits your life</h2>
+        <p style="max-width:500px;margin:16px auto 0">Not just stretching — a science-backed practice tailored to your body's unique needs and your life's real demands.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card fade-up">
+          <div class="benefit-icon">🧘</div>
+          <h3>Holistic Pain Relief</h3>
+          <p>Targeted yoga sequences for back pain, neck tension, knee pain, and postural correction — addressing root causes, not just symptoms.</p>
+        </div>
+        <div class="benefit-card fade-up" style="transition-delay:0.1s">
+          <div class="benefit-icon">🌿</div>
+          <h3>Stress & Anxiety Relief</h3>
+          <p>Evidence-based breathing and mindfulness techniques that calm your nervous system, helping you manage stress, anxiety, and depression naturally.</p>
+        </div>
+        <div class="benefit-card fade-up" style="transition-delay:0.2s">
+          <div class="benefit-icon">⚡</div>
+          <h3>Performance & Flexibility</h3>
+          <p>Build athletic-grade flexibility and body awareness that enhances performance for gym-goers, athletes, and anyone seeking peak physical condition.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="section services-preview">
+    <div class="container">
+      <div class="text-center">
+        <span class="eyebrow">Our Programs</span>
+        <h2>Designed for <em>Every Journey</em></h2>
+        <p style="color:rgba(255,255,255,0.6);max-width:480px;margin:16px auto 0">Choose the format that fits your goals — intensive training or personalized guidance.</p>
+      </div>
+      <div class="services-cards">
+        <div class="service-preview-card">
+          <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=700&q=80" alt="Group yoga masterclass training session">
+          <div class="spc-overlay"></div>
+          <div class="spc-content">
+            <span class="spc-tag">Most Popular</span>
+            <h3>20-Hour Training Masterclass</h3>
+            <p>A comprehensive program covering asanas, pranayama, anatomy, and lifestyle transformation.</p>
+          </div>
+        </div>
+        <div class="service-preview-card">
+          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=700&q=80" alt="One-to-one yoga consultancy session">
+          <div class="spc-overlay"></div>
+          <div class="spc-content">
+            <span class="spc-tag">Personal</span>
+            <h3>One-to-One Consultancy</h3>
+            <p>Private sessions crafted entirely around your specific health goals, concerns, and schedule.</p>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:40px">
+        <button class="btn btn-primary" onclick="showPage('services')">View All Programs →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" style="background:var(--cream)">
+    <div class="container">
+      <div class="text-center">
+        <span class="eyebrow">Student Stories</span>
+        <h2>Real Results, Real <em style="font-style:italic;color:var(--sage)">People</em></h2>
+      </div>
+      <div class="testimonials-grid" style="margin-top:56px">
+        <div class="testi-card fade-up">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"My chronic back pain disappeared after just 3 weeks. The personalized approach made all the difference — I've tried gym programs before but nothing like this."</p>
+          <div class="testi-author">
+            <div class="testi-avatar"><img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&q=80" alt="Aisha testimonial"></div>
+            <div><div class="testi-name">Aisha Rahman</div><div class="testi-role">Software Engineer, Remote Worker</div></div>
+          </div>
+        </div>
+        <div class="testi-card fade-up" style="transition-delay:0.1s">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"The prenatal yoga sessions were gentle, safe, and gave me so much confidence during my pregnancy. I felt stronger and calmer every single week."</p>
+          <div class="testi-author">
+            <div class="testi-avatar"><img src="https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?w=100&q=80" alt="Meera testimonial"></div>
+            <div><div class="testi-name">Meera Kapoor</div><div class="testi-role">Prenatal Mother</div></div>
+          </div>
+        </div>
+        <div class="testi-card fade-up" style="transition-delay:0.2s">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"As an athlete I was skeptical, but the 20-hour masterclass transformed my flexibility and recovery time. My performance has improved dramatically."</p>
+          <div class="testi-author">
+            <div class="testi-avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Rahul testimonial"></div>
+            <div><div class="testi-name">Rahul Verma</div><div class="testi-role">Professional Athlete</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Preview -->
+  <section class="section about-preview">
+    <div class="container">
+      <div class="about-preview-inner">
+        <div class="about-preview-img fade-up">
+          <img src="https://images.unsplash.com/photo-1573590330099-d6c7355ec595?w=600&q=80" alt="Daily Yoga instructor in peaceful pose surrounded by nature">
+        </div>
+        <div class="about-preview-content fade-up" style="transition-delay:0.15s">
+          <span class="eyebrow">About Daily Yoga</span>
+          <h2>A practice built on <em style="font-style:italic;color:var(--sage)">intention</em></h2>
+          <p>With over 8 years of dedicated practice and teaching, I've helped hundreds of students find balance, healing, and strength through yoga — not as a workout, but as a complete lifestyle transformation.</p>
+          <p>Every session I design carries a deep understanding of anatomy, breath, and the mind-body connection. Whether you're a beginner or seasoned practitioner, your journey is uniquely yours.</p>
+          <div class="about-checks">
+            <div class="about-check"><div class="check-icon">✓</div><div><strong>Certified</strong> in therapeutic and prenatal yoga with specialized training</div></div>
+            <div class="about-check"><div class="check-icon">✓</div><div><strong>Holistic approach</strong> combining asanas, pranayama, and lifestyle coaching</div></div>
+            <div class="about-check"><div class="check-icon">✓</div><div><strong>500+ students</strong> successfully guided through their transformation</div></div>
+          </div>
+          <button class="btn btn-dark" onclick="showPage('about')">My Full Story →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final Home CTA -->
+  <section class="section home-cta">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--sage-light)">Ready to Begin?</span>
+      <h2>Your transformation starts with <em>one conversation</em></h2>
+      <p>Book a free 30-minute discovery call. No commitment, no pressure — just a genuine conversation about what yoga can do for you.</p>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="showPage('contact')">Book Free Call →</button>
+        <button class="btn btn-outline" onclick="showPage('services')">Explore Programs</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ══════════════ ABOUT PAGE ══════════════ -->
+<div class="page" id="page-about">
+
+  <section class="page-hero">
+    <span class="eyebrow">Our Story</span>
+    <h1>Rooted in <em>Purpose,</em><br>Growing with You</h1>
+    <p>A journey that began with personal healing and evolved into a mission to help others find their path through yoga.</p>
+  </section>
+
+  <!-- Story -->
+  <section class="section">
+    <div class="container">
+      <div class="story-section">
+        <div class="story-img fade-up">
+          <img src="https://images.unsplash.com/photo-1588286840104-8957b019727f?w=600&q=80" alt="Yoga instructor in early morning practice at a peaceful location">
+        </div>
+        <div class="story-content fade-up" style="transition-delay:0.15s">
+          <span class="eyebrow">The Story</span>
+          <h2>From Healing to <em style="font-style:italic;color:var(--sage)">Teaching</em></h2>
+          <p>My yoga journey began not in a studio but in a doctor's office, with a diagnosis of severe postural issues and chronic stress that medications alone couldn't fix. Yoga was my last resort — and it changed everything.</p>
+          <p>Over eight years, I immersed myself in study across multiple disciplines: therapeutic yoga, pranayama, anatomy, and the ancient philosophical traditions behind the practice. What I discovered wasn't just physical relief — it was a complete reimagining of how to live.</p>
+          <p>Today, Daily Yoga exists to give you what took me years to learn — with clarity, compassion, and curriculum that truly works. I've guided students through back pain, anxiety, hormonal imbalances, and athletic recovery, always with one goal: lasting transformation, not temporary fixes.</p>
+          <div style="margin-top:32px">
+            <button class="btn btn-dark" onclick="showPage('contact')">Start Your Journey →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <div class="mission-section">
+    <div class="mission-card fade-up">
+      <div class="mission-icon">🎯</div>
+      <h3>Our Mission</h3>
+      <p>To make authentic, effective yoga accessible to everyone — whether you're managing pain, seeking peace, or chasing peak performance. We meet you exactly where you are.</p>
+    </div>
+    <div class="mission-card fade-up" style="transition-delay:0.1s">
+      <div class="mission-icon">👁️</div>
+      <h3>Our Vision</h3>
+      <p>A world where yoga is not a trend but a tool — woven into daily routines, prescribed by doctors, embraced by athletes, and practiced by every mother, every professional, every person.</p>
+    </div>
+    <div class="mission-card fade-up" style="transition-delay:0.2s">
+      <div class="mission-icon">💎</div>
+      <h3>Our Values</h3>
+      <p>Integrity in every session. Compassion in every interaction. Science behind every sequence. And the ancient wisdom of yoga at the heart of everything we teach.</p>
+    </div>
+  </div>
+
+  <!-- What Makes Us Different -->
+  <section class="section" style="background:var(--cream)">
+    <div class="container">
+      <div class="text-center">
+        <span class="eyebrow">Why Choose Us</span>
+        <h2>What sets Daily Yoga <em style="font-style:italic;color:var(--sage)">apart</em></h2>
+      </div>
+      <div class="diff-grid">
+        <div class="diff-item fade-up">
+          <div class="diff-num">01</div>
+          <div>
+            <h3>Therapeutically Trained</h3>
+            <p>Unlike generic yoga classes, every program is informed by anatomy, physiology, and therapeutic principles. Your health conditions are never ignored — they're our starting point.</p>
+          </div>
+        </div>
+        <div class="diff-item fade-up" style="transition-delay:0.1s">
+          <div class="diff-num">02</div>
+          <div>
+            <h3>Truly Personalized</h3>
+            <p>Our one-to-one consultancy is genuinely individual. No cookie-cutter sequences — every session is designed around your body, your schedule, and your specific goals.</p>
+          </div>
+        </div>
+        <div class="diff-item fade-up" style="transition-delay:0.15s">
+          <div class="diff-num">03</div>
+          <div>
+            <h3>Proven 20-Hour Curriculum</h3>
+            <p>Our masterclass is a complete system refined over years of teaching, covering postures, breath, mindset, and lifestyle — structured to create permanent change.</p>
+          </div>
+        </div>
+        <div class="diff-item fade-up" style="transition-delay:0.2s">
+          <div class="diff-num">04</div>
+          <div>
+            <h3>Specialized for Women</h3>
+            <p>Deep expertise in prenatal, postnatal, and hormonal balance yoga — programs designed with women's physiology in mind, not adapted from generic content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About CTA -->
+  <section class="section home-cta">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--sage-light)">Let's Connect</span>
+      <h2>Ready to write your <em>own story?</em></h2>
+      <p>Book a free discovery call and let's talk about what yoga can do for your unique situation.</p>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="showPage('contact')">Book Free Call →</button>
+        <button class="btn btn-outline" onclick="showPage('services')">View Programs</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ══════════════ SERVICES PAGE ══════════════ -->
+<div class="page" id="page-services">
+
+  <section class="page-hero">
+    <span class="eyebrow">Programs & Services</span>
+    <h1>Choose Your Path to <em>Wellness</em></h1>
+    <p>Expert-designed programs for every body, every lifestyle, every goal — from intensive masterclasses to intimate one-to-one sessions.</p>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="eyebrow">All Programs</span>
+        <h2>What we <em style="font-style:italic;color:var(--sage)">offer</em></h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-up">
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=600&q=80" alt="20-hour yoga training masterclass group session">
+          </div>
+          <div class="service-card-body">
+            <span class="service-tag">Signature Program</span>
+            <h3>20-Hour Training Masterclass</h3>
+            <p>Our flagship intensive program covering asanas, pranayama, anatomy, meditation, and yoga philosophy. Perfect for those committed to deep transformation.</p>
+            <span class="service-price">Starting RS12,000</span>
+            <button class="btn btn-dark" onclick="showPage('contact')" style="width:100%;justify-content:center">Book Now →</button>
+          </div>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:0.1s">
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80" alt="One-to-one personal yoga consultancy session">
+          </div>
+          <div class="service-card-body">
+            <span class="service-tag">Personal</span>
+            <h3>One-to-One Consultancy</h3>
+            <p>Private sessions customized entirely for you. Whether it's back pain, anxiety, weight management, or athletic recovery — your session, your rules.</p>
+            <span class="service-price">RS2,500 / session</span>
+            <button class="btn btn-dark" onclick="showPage('contact')" style="width:100%;justify-content:center">Book Now →</button>
+          </div>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:0.2s">
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80" alt="Prenatal yoga class for expecting mothers">
+          </div>
+          <div class="service-card-body">
+            <span class="service-tag">Women's Health</span>
+            <h3>Prenatal & Postnatal Yoga</h3>
+            <p>Safe, gentle, and deeply supportive yoga for every stage of motherhood. Designed with care for both mother and baby, trimester by trimester.</p>
+            <span class="service-price">RS1,800 / session</span>
+            <button class="btn btn-dark" onclick="showPage('contact')" style="width:100%;justify-content:center">Book Now →</button>
+          </div>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:0.05s">
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1598971861713-54ad16a7e72e?w=600&q=80" alt="Therapeutic yoga for back pain and neck pain relief">
+          </div>
+          <div class="service-card-body">
+            <span class="service-tag">Therapeutic</span>
+            <h3>Therapeutic Yoga</h3>
+            <p>Targeted sessions for yoga for back pain, neck pain, knee pain, thyroid support, diabetes management, and postural correction.</p>
+            <span class="service-price">RS2,200 / session</span>
+            <button class="btn btn-dark" onclick="showPage('contact')" style="width:100%;justify-content:center">Book Now →</button>
+          </div>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:0.15s">
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80" alt="Corporate stress relief yoga workshop for professionals">
+          </div>
+          <div class="service-card-body">
+            <span class="service-tag">Professional</span>
+            <h3>Corporate Wellness Sessions</h3>
+            <p>Yoga for stress relief, anxiety, and work-life balance — designed for busy professionals, remote workers, and corporate teams seeking sustainable wellness.</p>
+            <span class="service-price">Custom Pricing</span>
+            <button class="btn btn-dark" onclick="showPage('contact')" style="width:100%;justify-content:center">Get a Quote →</button>
+          </div>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:0.25s">
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=600&q=80" alt="Athletic performance yoga for flexibility and recovery">
+          </div>
+          <div class="service-card-body">
+            <span class="service-tag">Athletic</span>
+            <h3>Athletic Performance Yoga</h3>
+            <p>Yoga for flexibility, injury prevention, and faster recovery — built for gym-goers, runners, and competitive athletes who want an edge.</p>
+            <span class="service-price">RS2,000 / session</span>
+            <button class="btn btn-dark" onclick="showPage('contact')" style="width:100%;justify-content:center">Book Now →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section" style="background:var(--cream)">
+    <div class="container">
+      <div class="text-center">
+        <span class="eyebrow">Your Journey</span>
+        <h2>How it <em style="font-style:italic;color:var(--sage)">works</em></h2>
+        <p style="max-width:480px;margin:16px auto 0">Four simple steps from first contact to lasting transformation.</p>
+      </div>
+      <div class="how-steps">
+        <div class="how-step fade-up">
+          <div class="step-num">1</div>
+          <h3>Free Discovery Call</h3>
+          <p>We talk about your goals, challenges, health history, and what you're hoping to achieve.</p>
+        </div>
+        <div class="how-step fade-up" style="transition-delay:0.1s">
+          <div class="step-num">2</div>
+          <h3>Custom Assessment</h3>
+          <p>I design a personalized plan — the right program, pace, and modifications for your unique body.</p>
+        </div>
+        <div class="how-step fade-up" style="transition-delay:0.2s">
+          <div class="step-num">3</div>
+          <h3>Begin Your Practice</h3>
+          <p>Start your sessions with expert guidance, detailed instructions, and ongoing support.</p>
+        </div>
+        <div class="how-step fade-up" style="transition-delay:0.3s">
+          <div class="step-num">4</div>
+          <h3>Transform & Sustain</h3>
+          <p>Track your progress, refine the practice, and build habits that last a lifetime.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="eyebrow">Questions</span>
+        <h2>Frequently Asked <em style="font-style:italic;color:var(--sage)">Questions</em></h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <h3>Do I need prior yoga experience to join the masterclass?</h3>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a"><p>No experience is necessary. The 20-hour masterclass is designed to be accessible to complete beginners while offering enough depth to challenge intermediate practitioners. We adapt the content to your level throughout the program.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <h3>Is online yoga consultancy as effective as in-person?</h3>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a"><p>Yes — our one-to-one consultancy sessions are conducted via video and are equally effective. You'll receive real-time corrections, personalized feedback, and the same level of attention as an in-person session.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <h3>Can yoga help with medical conditions like thyroid or diabetes?</h3>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a"><p>Therapeutic yoga for diabetes and thyroid conditions has strong research support. Our therapeutic programs are designed to complement medical treatment — always in consultation with your doctor. Many students see meaningful improvements in managing their conditions through consistent practice.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <h3>Is prenatal yoga safe in all trimesters?</h3>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a"><p>Yes, with proper guidance. Our prenatal program is trimester-specific, with modifications for each stage. We always recommend consulting your OB-GYN before beginning any exercise program during pregnancy, and we work in alignment with their guidance.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <h3>How quickly will I see results?</h3>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a"><p>Most students notice improvements in sleep, mood, and physical tension within the first 2 weeks. Deeper physical changes like improved flexibility, posture, and pain reduction typically become pronounced within 4-6 weeks of consistent practice.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <h3>What equipment do I need?</h3>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a"><p>Just a yoga mat and comfortable clothing. We'll recommend specific props (blocks, straps, bolsters) only if they're genuinely helpful for your practice — and often household items work perfectly as substitutes.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services CTA -->
+  <section class="section home-cta">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--sage-light)">Start Today</span>
+      <h2>The best time to start was yesterday.<br>The <em>second best</em> is now.</h2>
+      <p>Book your free 30-minute discovery call. Let's find the right program for your unique goals.</p>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="showPage('contact')">Book Free Call →</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ══════════════ LISTINGS PAGE ══════════════ -->
+<div class="page" id="page-listings">
+
+  <section class="page-hero">
+    <span class="eyebrow">Programs & Resources</span>
+    <h1>Explore Our <em>Complete</em> Collection</h1>
+    <p>From intensive training programs to specialized workshops — find the perfect fit for your wellness journey.</p>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterListings('all', this)">All Programs</button>
+        <button class="filter-btn" onclick="filterListings('training', this)">Training</button>
+        <button class="filter-btn" onclick="filterListings('therapeutic', this)">Therapeutic</button>
+        <button class="filter-btn" onclick="filterListings('womens', this)">Women's Health</button>
+        <button class="filter-btn" onclick="filterListings('wellness', this)">Stress & Wellness</button>
+        <button class="filter-btn" onclick="filterListings('athletic', this)">Athletic</button>
+      </div>
+
+      <div class="listings-grid" id="listings-grid">
+
+        <div class="listing-card" data-cat="training">
+          <div class="listing-img">
+            <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=600&q=80" alt="20-hour yoga training masterclass">
+            <span class="listing-badge">Bestseller</span>
+          </div>
+          <div class="listing-body">
+            <div class="listing-cat">Training</div>
+            <h3>20-Hour Yoga Masterclass</h3>
+            <p>Our comprehensive flagship program — 20 hours of structured training in asanas, pranayama, anatomy, meditation, and yoga philosophy.</p>
+            <div class="listing-meta">
+              <span class="listing-price">RS12,000</span>
+              <span class="listing-duration">20 Hours · All Levels</span>
+            </div>
+            <button class="btn btn-dark" onclick="showPage('contact')" style="width:100%;justify-content:center;margin-top:16px">Enroll Now →</button>
+          </div>
+        </div>
+
+        <div class="listing-card" data-cat="training">
+          <div class="listing-img">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80" alt="One-to-one yoga consultancy">
+            <span class="listing-badge">Personal</span>
+          </div>
+          <div class="listing-body">
+            <div class="listing-cat">Training</div>
+            <h3>Private 1:1 Consultancy Package</h3>
+            <p>Eight private sessions with a fully personalized plan. Ideal for those with specific health goals who need individual attention and expert guidance.</p>
+            <div class="listing-meta">
+              <span class="listing-price">RS18,000</span>
+              <span class="listing-duration">8 Sessions · Flexible</span>
+            </div>
+            <button class="btn btn-dark" onclick="showPage('contact')" style="width:100%;justify-content:center;margin-top:16px">Book Package →</button>
+          </div>
+        </div>
+
+        <div class="listing-card" data-cat="therapeutic">
+          <div class="listing-img">
+            <img src="https://images.unsplash.com/photo-1598971861713-54ad16a7e72e?w=600&q=80" alt="Yoga for back pain and neck pain">
+            <span class="listing-badge">Popular</span>
+          </div>
+          <div class="listing-body">
+            <div class="listing-cat">Therapeutic</div>
+            <h3>Back & Neck Pain Recovery Program</h3>
+            <p>A targeted 4-week program using yoga for back pain and neck pain relief — addressing postural imbalances at their root cause.</p>
+            <div class="listing-meta">
+              <span class="listing-price">RS8,000</span>
+              <span class="listing-duration">4 Weeks · Beginner+</span>
+            </div>
+            <button class="btn btn-dark" onclick="showPage('contact')" style="width:100%;justify-content:center;margin-top:16px">Start Program →</button>
+          </div>
+        </div>
+
+        <div class="listing-card" data-cat="womens">
+          <div class="listing-img">
+            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80" alt="Prenatal yoga for expecting mothers">
+            <span class="listing-badge">Specialist</span>
+          </div>
+          <div class="listing-body">
+            <div class="listing-cat">Women's Health</div>
+            <h3>Prenatal Yoga Program</h3>
+            <p>Trimester-specific yoga for expecting mothers — safe, gentle, and deeply restorative. Supports baby positioning, comfort, and birth preparation.</p>
+            <div class="listing-meta">
+              <span class="listing-price">RS7,200</span>
+              <span class="listing-duration">Monthly · Trimesters 1-3</span>
+            </div>
+            <button class="btn btn-dark" onclick="showPage('contact')" style="width:100%;justify-content:center;margin-top:16px">Join Program →</button>
+          </div>
+        </div>
+
+        <div class="listing-card" data-cat="womens">
+          <div class="listing-img">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80" alt="Hormonal balance yoga for women">
+          </div>
+          <div class="listing-body">
+            <div class="listing-cat">Women's Health</div>
+            <h3>Hormonal Balance & Weight Management</h3>
+            <p>A holistic yoga program for women targeting hormonal balance, thyroid support, and sustainable weight management through consistent practice.</p>
+            <div class="listing-meta">
+              <span class="listing-price">RS9,500</span>
+              <span class="listing-duration">6 Weeks · Women Only</span>
+            </div>
+            <button class="btn btn-dark" onclick="showPage('contact')" style="width:100%;justify-content:center;margin-top:16px">Enroll Now →</button>
+          </div>
+        </div>
+
+        <div class="listing-card" data-cat="wellness">
+          <div class="listing-img">
+            <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&q=80" alt="Yoga for stress relief and anxiety management">
+          </div>
+          <div class="listing-body">
+            <div class="listing-cat">Stress & Wellness</div>
+            <h3>Stress & Anxiety Relief Program</h3>
+            <p>A 4-week program combining yoga for stress relief with pranayama and mindfulness — designed for professionals, students, and anyone seeking calm.</p>
+            <div class="listing-meta">
+              <span class="listing-price">RS6,500</span>
+              <span class="listing-duration">4 Weeks · All Levels</span>
+            </div>
+            <button class="btn btn-dark" onclick="showPage('contact')" style="width:100%;justify-content:center;margin-top:16px">Begin Program →</button>
+          </div>
+        </div>
+
+        <div class="listing-card" data-cat="athletic">
+          <div class="listing-img">
+            <img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=600&q=80" alt="Athletic performance yoga for flexibility">
+          </div>
+          <div class="listing-body">
+            <div class="listing-cat">Athletic</div>
+            <h3>Athlete Performance & Flexibility</h3>
+            <p>Yoga for flexibility, recovery, and injury prevention — built specifically for gym-goers, runners, cyclists, and competitive athletes.</p>
+            <div class="listing-meta">
+              <span class="listing-price">RS8,000</span>
+              <span class="listing-duration">5 Weeks · Intermediate</span>
+            </div>
+            <button class="btn btn-dark" onclick="showPage('contact')" style="width:100%;justify-content:center;margin-top:16px">Enroll Now →</button>
+          </div>
+        </div>
+
+        <div class="listing-card" data-cat="therapeutic">
+          <div class="listing-img">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80" alt="Yoga for diabetes and thyroid management">
+          </div>
+          <div class="listing-body">
+            <div class="listing-cat">Therapeutic</div>
+            <h3>Metabolic Health Yoga</h3>
+            <p>Specialized sequences for yoga for diabetes and thyroid conditions — used as a lifestyle complement to medical treatment for lasting metabolic support.</p>
+            <div class="listing-meta">
+              <span class="listing-price">RS9,000</span>
+              <span class="listing-duration">6 Weeks · Medical Referral OK</span>
+            </div>
+            <button class="btn btn-dark" onclick="showPage('contact')" style="width:100%;justify-content:center;margin-top:16px">Book Consultation →</button>
+          </div>
+        </div>
+
+        <div class="listing-card" data-cat="wellness">
+          <div class="listing-img">
+            <img src="https://images.unsplash.com/photo-1588286840104-8957b019727f?w=600&q=80" alt="Morning yoga for posture correction and energy">
+          </div>
+          <div class="listing-body">
+            <div class="listing-cat">Stress & Wellness</div>
+            <h3>30-Day Morning Yoga Challenge</h3>
+            <p>Build a daily practice in 30 days. Perfect for busy professionals seeking yoga for posture correction, energy, and mental clarity before the workday.</p>
+            <div class="listing-meta">
+              <span class="listing-price">RS3,500</span>
+              <span class="listing-duration">30 Days · All Levels</span>
+            </div>
+            <button class="btn btn-dark" onclick="showPage('contact')" style="width:100%;justify-content:center;margin-top:16px">Join Challenge →</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align:center;margin-top:56px">
+        <p style="margin-bottom:20px">Not sure which program is right for you?</p>
+        <button class="btn btn-primary" onclick="showPage('contact')">Book a Free Discovery Call →</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ══════════════ CONTACT PAGE ══════════════ -->
+<div class="page" id="page-contact">
+
+  <section class="page-hero">
+    <span class="eyebrow">Get in Touch</span>
+    <h1>Let's Begin Your <em>Journey</em></h1>
+    <p>Book a free 30-minute call, ask a question, or simply say hello. We'd love to hear from you.</p>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Info Side -->
+        <div>
+          <h2>Book Your Free Discovery Call</h2>
+          <p>Fill in the form and I'll reach out within 24 hours to schedule your complimentary 30-minute consultation — no commitment required.</p>
+
+          <div class="contact-detail" style="margin-top:36px">
+            <div class="detail-icon">📧</div>
+            <div>
+              <div class="detail-label">Email</div>
+              <div class="detail-value">Sakhidevofficcial@gmail.com</div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="detail-icon">📱</div>
+            <div>
+              <div class="detail-label">Phone / WhatsApp</div>
+              <div class="detail-value">+92 304 1367180</div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="detail-icon">⏰</div>
+            <div>
+              <div class="detail-label">Available Hours</div>
+              <div class="detail-value">Mon–Sat, 6 AM – 8 PM IST</div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="detail-icon">📍</div>
+            <div>
+              <div class="detail-label">Location</div>
+              <div class="detail-value">Online & In-Person Sessions Available</div>
+            </div>
+          </div>
+
+          <div>
+            <p style="font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:12px">Follow Along:</p>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Instagram">📸</a>
+              <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+              <a href="#" class="social-link" aria-label="Facebook">👍</a>
+              <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Side -->
+        <div class="contact-form-wrap">
+          <h3 style="color:var(--forest);margin-bottom:8px;font-size:1.5rem">Send a Message</h3>
+          <p style="margin-bottom:28px">I read every message personally and respond within 24 hours.</p>
+          <div id="contact-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="fname">First Name *</label>
+                <input type="text" id="fname" placeholder="Zeeshan" required>
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name *</label>
+                <input type="text" id="lname" placeholder="Javed">
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" placeholder="sakhidevofficial@gmail.com" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone / WhatsApp *</label>
+                <input type="tel" id="phone" placeholder="+92 304 1367180" required>
+              </div>
+              <div class="form-group full">
+                <label for="program">Program of Interest</label>
+                <select id="program">
+                  <option value="">Select a program...</option>
+                  <option>20-Hour Training Masterclass</option>
+                  <option>One-to-One Consultancy</option>
+                  <option>Prenatal / Postnatal Yoga</option>
+                  <option>Therapeutic Yoga (Pain Relief)</option>
+                  <option>Stress & Anxiety Relief</option>
+                  <option>Athletic Performance Yoga</option>
+                  <option>Corporate Wellness</option>
+                  <option>Not sure – need guidance</option>
+                </select>
+              </div>
+              <div class="form-group full">
+                <label for="message">Tell Me About Your Goals *</label>
+                <textarea id="message" placeholder="What are you hoping to achieve through yoga? Any health conditions or specific concerns I should know about?" required></textarea>
+              </div>
+            </div>
+            <button class="btn btn-primary form-submit" onclick="submitForm()">Send Message & Book Call →</button>
+          </div>
+          <div id="form-success" style="display:none;text-align:center;padding:40px 20px">
+            <div style="font-size:3rem;margin-bottom:16px">🌿</div>
+            <h3 style="color:var(--forest);margin-bottom:12px">Message Received!</h3>
+            <p>Thank you for reaching out. I'll be in touch within 24 hours to schedule your free discovery call.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <div class="map-placeholder">
+    <div class="map-pin">
+      <span class="map-pin-icon">📍</span>
+      <h3>Daily Yoga Studio</h3>
+      <p>Online sessions available worldwide · In-person in your city</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="logo-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1B3A2D" stroke-width="1.5">
+            <path d="M12 2C8 2 5 6 5 10c0 3 2 5.5 4.5 7L12 22l2.5-5C17 15.5 19 13 19 10c0-4-3-8-7-8z"/>
+            <circle cx="12" cy="10" r="2.5" fill="#1B3A2D" stroke="none"/>
+          </svg>
+        </div>
+        <span class="logo-text">Daily<span style="color:var(--gold)">Yoga</span></span>
+      </div>
+      <p>Transforming lives through authentic yoga practice — one breath, one session, one student at a time.</p>
+      <div class="footer-socials" style="margin-top:20px">
+        <a href="#" class="footer-social">📸</a>
+        <a href="#" class="footer-social">▶️</a>
+        <a href="#" class="footer-social">👍</a>
+        <a href="#" class="footer-social">💬</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a onclick="showPage('home')">Home</a></li>
+        <li><a onclick="showPage('about')">About</a></li>
+        <li><a onclick="showPage('services')">Services</a></li>
+        <li><a onclick="showPage('listings')">Programs</a></li>
+        <li><a onclick="showPage('contact')">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Programs</h4>
+      <ul>
+        <li><a onclick="showPage('services')">20-Hour Masterclass</a></li>
+        <li><a onclick="showPage('services')">1:1 Consultancy</a></li>
+        <li><a onclick="showPage('services')">Prenatal Yoga</a></li>
+        <li><a onclick="showPage('services')">Therapeutic Yoga</a></li>
+        <li><a onclick="showPage('services')">Corporate Wellness</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>Contact</h4>
+      <p>
+        📧 Sakhidev.com<br>
+        📱 +92 304 1367180<br>
+        ⏰ Mon–Sat · 6 AM – 8 PM IST<br><br>
+        Online & In-Person Sessions<br>Available Worldwide
+      </p>
+      <button class="btn btn-primary" onclick="showPage('contact')" style="margin-top:20px;font-size:0.85rem;padding:12px 24px">Book Free Call →</button>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Daily Yoga. All rights reserved.</p>
+    <div style="display:flex;gap:24px">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ── PAGE ROUTING ──
+  function showPage(page) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-' + page).classList.add('active');
+    document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+    const navEl = document.getElementById('nav-' + page);
+    if (navEl) navEl.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(observeFadeUps, 100);
+  }
+
+  // ── MOBILE MENU ──
+  function toggleMenu() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  }
+
+  // ── STICKY HEADER ──
+  window.addEventListener('scroll', () => {
+    const h = document.getElementById('main-header');
+    h.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // ── FAQ TOGGLE ──
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    item.classList.toggle('open');
+  }
+
+  // ── FILTER LISTINGS ──
+  function filterListings(cat, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.listing-card').forEach(card => {
+      if (cat === 'all' || card.dataset.cat === cat) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // ── FORM SUBMIT ──
+  function submitForm() {
+    const fname = document.getElementById('fname').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const message = document.getElementById('message').value;
+    if (!fname || !email || !phone || !message) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  }
+
+  // ── SCROLL ANIMATIONS ──
+  function observeFadeUps() {
+    const els = document.querySelectorAll('.page.active .fade-up:not(.visible)');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(el => obs.observe(el));
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    observeFadeUps();
+    window.addEventListener('scroll', observeFadeUps);
+  });
+</script>
+</body>
+</html>
